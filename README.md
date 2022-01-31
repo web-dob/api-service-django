@@ -65,6 +65,29 @@
                 - Token 375c3c5b5858b94ad02d54c3b10346f0eabcf912
                 
     - API пополнения данных: POST /calculate
+      ```
+        {
+            "user_id": int,
+            "data": {
+                "x_data_type": str,
+                "y_data_type": str,
+                "x": [
+                    {
+                        "date": YYYY-MM-DD,
+                        "value": float,
+                    },
+                    ...
+                ],
+                "y": [
+                    {
+                        "date": YYYY-MM-DD,
+                        "value": float,
+                    },
+                    ...
+                ]
+            }
+        }
+      ```
 
     - API получения результата: GET /correlation?x_data_type=str&y_data_type=str&user_id=int
 
